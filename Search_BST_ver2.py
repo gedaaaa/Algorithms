@@ -10,6 +10,7 @@ class TreeNode():
         self.left = left
         self.right = right
         self.parent = parent
+
     def __iter__(self):
         # 迭代器
         if self:
@@ -111,15 +112,16 @@ class TreeNode():
         while current.hasRightChild():
             current = current.left
         return current
+
     def print(self):
-        x=self
+        x = self
         if x.key is None:
             return
         if x is None:
             return
         if x.left is not None:
             x.left.print()
-        print(x.key,x.val)
+        print(x.key, x.val)
         if x.right is not None:
             x.right.print()
 
@@ -181,6 +183,8 @@ class BinarySearchTree:
                 return target.val
             else:
                 return None
+        else:
+            return None
 
     def _get(self, key, currentNode):
         if not currentNode:
@@ -274,9 +278,12 @@ class BinarySearchTree:
                         nodeToRemove.right.val,
                         nodeToRemove.right.left,
                         nodeToRemove.right.right)
+
     def print(self):
 
         self.root.print()
+
+
 
 def inputer(list):
     st = BinarySearchTree()

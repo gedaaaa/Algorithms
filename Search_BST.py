@@ -4,6 +4,8 @@ import os
 # 需要着重注意 None type 无法做很多操作，需要自行限定
 # 方法需要括号！！！
 
+# ！！！！寻要重新检查N的维护
+
 
 class Node():
     def __init__(self, key, val, n=0, left=None, right=None):
