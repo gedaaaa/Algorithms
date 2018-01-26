@@ -15,7 +15,7 @@ class SeparateChainingHashST:
                 return v
             else:
                 raise KeyError('{} not fond'.format(key))
-    def del(self,key):
+    def delete(self,key):
         index=self._hash(key)
         for k,v in self._list[index]:
             if k==key:
