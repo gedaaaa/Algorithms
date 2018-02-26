@@ -14,14 +14,14 @@ class SeparateChainingHashST:
             if k == key:
                 return v
             else:
-                raise KeyError('{} not fond'.format(key))
+                raise KeyError('{} not found'.format(key))
     def delete(self,key):
         index=self._hash(key)
         for k,v in self._list[index]:
             if k==key:
-                self._list.remove([k,v])
+                self._list[index].remove([k,v])
             else:
-                raise KeyError('{} not fond'.format(key))
+                raise KeyError('{} not found'.format(key))
     def put(self,key,value):
         index=self._hash(key)
         for i,(k,v) in enumerate(self._list[index]):#枚举，i递增，同时每个i对应一个元素，对这个例子，元素的结构是k,v
