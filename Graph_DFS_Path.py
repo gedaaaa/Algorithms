@@ -43,8 +43,3 @@ if __name__ == '__main__':
     print(paths.hasPathTo(10))
     print(paths.hasPathTo(4))
     print(paths.pathTo(3))
-
-    v=0
-    while v<graphTest.V:
-       print(paths.pathTo(v))
-       v+=1
